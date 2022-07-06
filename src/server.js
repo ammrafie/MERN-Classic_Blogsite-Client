@@ -3,7 +3,8 @@ import bodyParser from 'body-parser';
 import {MongoClient} from 'mongodb';
 import path from 'path';
 
-const uri= 'mongodb://localhost:27017';
+const port= process.env.PORT || 80;
+const uri = process.env.MONGO_URI; // Use for production only:   const uri= 'mongodb://localhost:27017';
 const dbName = 'my-blog';
 const dbcollectionName = 'articles';
 
@@ -81,7 +82,7 @@ app.get('*', (req, res) => {
 })
 
 // Actually Start the server
-app.listen(8000, () => console.log('Listening on port 8000'));
+app.listen(port, () => console.log('Listening on port ... '));
 
 
 
