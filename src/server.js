@@ -3,8 +3,8 @@ import bodyParser from 'body-parser';
 import {MongoClient} from 'mongodb';
 import path from 'path';
 
-const port= process.env.PORT;
-const uri = process.env.MONGO_URI; // Use for production only:   const uri= 'mongodb://localhost:27017';
+const port= process.env.PORT || 5000;
+const uri = process.env.MONGO_URI || "mongodb+srv://mongouser00:pBe1V6KG1BTiSNZ7@cluster0.hxm08.mongodb.net/?retryWrites=true&w=majority"; // Use for production only:   const uri= 'mongodb://localhost:27017';
 const dbName = 'my-blog';
 const dbcollectionName = 'articles';
 
