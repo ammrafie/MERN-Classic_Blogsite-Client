@@ -6,9 +6,9 @@
     "node": "16.15.1",
     "npm": "8.13.1"
   },
-  "main": "src/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "npx nodemon --exec npx babel-node src/server.js",
+    "start": "npx babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
