@@ -7,6 +7,8 @@ console.log("############################");
 console.log("Done with import statements!");
 console.log("############################");
 
+// For production use script: "start": "npx nodemon --exec npx babel-node src/server.js",
+
 const port= process.env.PORT || 5000;
 const uri = process.env.MONGO_URI || "mongodb+srv://mongouser00:pBe1V6KG1BTiSNZ7@cluster0.hxm08.mongodb.net/?retryWrites=true&w=majority"; // Use for production only:   const uri= 'mongodb://localhost:27017';
 const dbName = 'my-blog';
