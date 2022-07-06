@@ -3,15 +3,27 @@ import bodyParser from 'body-parser';
 import {MongoClient} from 'mongodb';
 import path from 'path';
 
+console.log("############################");
+console.log("Done with import statements!");
+console.log("############################");
+
 const port= process.env.PORT || 5000;
 const uri = process.env.MONGO_URI || "mongodb+srv://mongouser00:pBe1V6KG1BTiSNZ7@cluster0.hxm08.mongodb.net/?retryWrites=true&w=majority"; // Use for production only:   const uri= 'mongodb://localhost:27017';
 const dbName = 'my-blog';
 const dbcollectionName = 'articles';
 
+console.log("############################");
+console.log("Done with setting up constants!");
+console.log("############################");
+
 const app = express();
 
 // After merging front-end, we have to tell where our static files are located.
 app.use(express.static("public"));   // Old version: path.join(__dirname, '/build')
+
+console.log("############################");
+console.log("Done with telling where the static files are!");
+console.log("############################");
 
 // Parses json obj which is send with a request &
 // Adds a body property to the request parameter.
