@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import {MongoClient} from 'mongodb';
 import path from 'path';
 
-const port= process.env.PORT || 80;
+const port= process.env.PORT;
 const uri = process.env.MONGO_URI; // Use for production only:   const uri= 'mongodb://localhost:27017';
 const dbName = 'my-blog';
 const dbcollectionName = 'articles';
