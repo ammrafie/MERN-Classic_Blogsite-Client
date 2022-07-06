@@ -8,6 +8,7 @@ console.log("Done with import statements!");
 console.log("############################");
 
 // For production use script: "start": "npx nodemon --exec npx babel-node src/server.js",
+// For development use script: "npx babel-node src/server.js",
 
 const port= process.env.PORT || 5000;
 const uri = process.env.MONGO_URI || "mongodb+srv://mongouser00:pBe1V6KG1BTiSNZ7@cluster0.hxm08.mongodb.net/?retryWrites=true&w=majority"; // Use for production only:   const uri= 'mongodb://localhost:27017';
@@ -21,7 +22,8 @@ console.log("############################");
 const app = express();
 
 // After merging front-end, we have to tell where our static files are located.
-app.use(express.static("public"));   // Old version: path.join(__dirname, '/build')
+// app.use(express.static("public"));   // Old version: path.join(__dirname, '/build')
+app.use(express.static(path.join(__dirname, '../public')));
 
 console.log("############################");
 console.log("Done with telling where the static files are!");
@@ -92,7 +94,8 @@ app.post('/api/articles/:name/add-comment', (req,res) => {
 // All requests that aren't caught by any other api routes should be passed onto our app
 // This will allow our client-side app to navigate between pages and process URLs correctly
 app.get('*', (req, res) => {
-    res.sendFile("public/index.html");  // Old version:  path.join(__dirname, '/build/index.html')
+    // res.sendFile("public/index.html");  // Old version:  path.join(__dirname, '/build/index.html')
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 })
 
 // Actually Start the server
