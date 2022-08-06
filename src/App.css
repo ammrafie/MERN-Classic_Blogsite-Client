@@ -1,0 +1,154 @@
+.App {
+  /* text-align: center; */
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+  font-family: 'JetBrains Mono';
+}
+
+.page {
+  margin: 30px auto;
+  text-align: justify;
+  max-width: 700px;
+  padding: 0 10px;
+}
+
+nav {
+  text-align: center;
+  border-bottom: 4px solid #282c34;
+}
+
+nav li {
+  display: inline-block;
+  
+}
+
+nav li a {
+  text-decoration: none;
+  color:#282c34;
+  padding: 10px;
+}
+
+nav li a:hover {
+  background-color: tomato;
+  color: snow;
+  transition: 400ms;
+}
+
+/* .article-list-item-container {
+  border: 2px solid teal;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 10px;
+  background: snow;
+} */
+
+.article-list-item {
+  text-decoration: none;
+  color: #282c34;
+}
+
+.article-list-item-container {
+  border-bottom: 3px solid lightsteelblue;
+}
+
+
+.article-list-item:hover {
+  color: rgb(25, 87, 97);
+}
+
+
+.commentForm {
+  padding-bottom: 50px;
+  border-bottom: solid 3px #282c34;
+}
+
+.commentForm h3 {
+  margin-bottom: 13px;
+}
+
+.username, .commentText {
+  font-style: italic;
+}
+
+.username, .username input, 
+.commentText, .commentText textarea,
+.commentForm button  {
+  margin-left: 10px;
+  font-family: "JetBrains Mono";
+}
+
+.username input, .commentText textarea{
+  display:block;
+  margin-top: 3px;
+  margin-bottom: 13px;
+}
+
+.upvoteSection button, .commentForm button {
+  background-color: #282c34;
+  color: aliceblue;
+  padding: 6px;
+  display: inline-block;
+  border-radius: 5px;
+  font-family: 'JetBrains Mono';
+  margin-right: 15px;
+}
+
+.upvoteStatus {
+  font-size: 14px;
+  font-style: italic;
+  display: inline-block;
+}
+
+.commentSection {
+  padding-bottom: 25px;
+  /* border-bottom: solid 3px #282c34; */
+}
+
+.comment {
+  padding-left: 10px;
+}
+
+.comment h4 {
+  margin-bottom: 0px;
+  margin-top: 14px;
+  font-style: italic;
+}
+
+.comment p {
+  margin: 1px;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

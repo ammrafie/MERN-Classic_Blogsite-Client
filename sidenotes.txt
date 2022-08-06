@@ -1,0 +1,48 @@
+Create-React-App Generator can be used to easily set up a react project
+
+Best way to set up a react project:
+npx create-react-app my-blog --use-npm
+
+npm install <package_name> --save installs the package and updates the dependencies in your package.json.
+
+
+
+Problem1 ...
+- In V6, you can't use the component prop anymore. It was replaced in favor of element: <Route path="/" element={<Home />}></Route>
+- In react-router-dom V6, a <Route> is only ever to be used as the child of <Routes> element, never rendered directly.
+- In V6, 'exact' in Route Element is implemented by default
+
+Problem2:
+- In react router anchor element is not used in li tags
+- But we should use html link instead of react-router link, when want to link pages to a different url pointing to a different page with-in the website or different website.
+
+Problem3:
+- The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path> .
+
+Problem4:
+- proxy property in package.json not working. (Routing to frontend endpoint?)
+- Solution to proxyProb: stop app, delete package-lock.json and start app.
+
+
+Tips:
+- Shift + Ctrl + P   to access command palate in VScode
+- Need to set email & name in git after installation
+    Run:    git config --global user.email "you@example.com"
+    Run:    git config --global user.name "Your Name"
+
+
+TODO:
+Check out react component vs element
+Checkout the asynchronous api called 'fetch'
+    Builtin 'fetch' doesn't works in internet explorer.
+    Do a: npm install --save whatwg-fetch
+    And add to index.js: import 'whatwg-fetch'
+useEffect gives place to perform all sideEffects like fetching data, setting state, etc.
+Checkout problem: response blocked out by CORES policy.
+
+
+To build react apps run in react application folder: npm run build
+
+
+
+        
